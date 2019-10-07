@@ -165,7 +165,7 @@ h2{
 		1px 1px 0 white;
 }
 
-.header-img{	
+#header-img{	
 	box-shadow: 4px 4px 5px gray;
 	border-radius: 190px
 }
@@ -176,7 +176,6 @@ h2{
 }
 
 .section1 .left{
-	box-sizing: border-box;
 	align-content: left;
 	padding: 30px 15px 30px 0px;
 }
@@ -186,7 +185,6 @@ h2{
 }
 
 .section1 .right{
-	box-sizing: border-box;
 	align-content: right;
 	padding: 30px 0px 30px 15px;
 }
@@ -203,13 +201,11 @@ h2{
 }
 
 .section2{
-	box-sizing: border-box;
 	display: flex;
 	border-bottom: 1px solid black;
 }
 
 .section2 .left{
-	box-sizing: border-box;
 	align-content: left;
 	padding: 30px 15px 30px 0px;
 }
@@ -219,7 +215,6 @@ h2{
 }
 
 .section2 .center{
-	box-sizing: border-box;
 	align-content: center;
 	padding: 30px 15px;
 }
@@ -229,7 +224,6 @@ h2{
 }
 
 .section2 .right{
-	box-sizing: border-box;
 	align-content: right;
 	padding: 30px 0px 30px 15px;
 }
@@ -287,7 +281,7 @@ footer{
 	/* transition-duration: .8s; */
 }
 
-.services-header-img{
+#services-header-img{
 	margin-bottom: 30px;
 	border-radius: 10px;
 	box-shadow: 3px 3px 5px black;
@@ -360,4 +354,213 @@ footer{
 .bottom img{
 	width: 48%;
 	margin-left: 20px;
+}
+
+/* MEDIA QUERIES - HOME PAGE */
+@media (max-width: 800px){
+	.navigation{
+		flex-direction: column-reverse;
+		flex-wrap: nowrap;
+		width: 100%;
+		position: absolute;
+	}
+
+	.navigation:hover{
+		background-color: rgba(255, 255, 255, 0.0);
+	}
+
+	.navigation nav{
+		width: 100%;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.navigation a{
+		padding: 2% 3.4%;
+	}
+	
+	.navigation img{
+		margin-bottom: 2%;
+	}
+
+	#header-img{
+		display: none;
+	}
+
+	.iod{
+		margin-top: 10%;
+	}
+}
+
+@media (max-width: 500px){
+	.navigation{
+		flex-direction: column-reverse;
+		flex-wrap: nowrap;
+		width: 100%;
+		position: absolute;
+	}
+
+	.navigation:hover{
+		background-color: rgba(255, 255, 255, 0.0);
+	}
+
+	.navigation nav{
+		width: 100%;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.navigation a{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		border-top: 1px solid gray;
+		padding: 3% 0;
+	}
+
+	.navigation a:last-child{
+		border-bottom: 1px solid gray;
+	}
+	
+	.navigation img{
+		margin-bottom: 2%;
+	}
+
+	#header-img{
+		display: none;
+	}
+
+	.iod{
+		margin-top: 60%;
+		padding-top: 5%;
+	}
+
+	.section1{
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.section1 .left{
+		width: 100%;
+		padding: 3%;
+	}
+
+	.middle-img{
+		margin-bottom: 2%;
+	}
+
+	.section2{
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.section2 .left{
+		width: 100%;
+		padding: 3%;
+	}
+}
+
+/* MEDIA QUERIES - SERVICES PAGE */
+@media (max-width: 800px){
+	.servicesNavigation{
+		flex-direction: column-reverse;
+		width: 100%;
+	}
+
+	.servicesNavigation
+
+	.servicesNavigation nav{
+		display: flex;
+		width: 100%;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.servicesNavigation a{
+		padding: 2% 3.4%;
+	}
+	
+	.servicesNavigation img{
+		margin-bottom: 2%;
+	}
+
+	#header-img{
+		display: none;
+	}
+
+	.iod{
+		margin-top: 10%;
+	}
+}
+
+@media (max-width: 500px){
+	.navigation{
+		flex-direction: column-reverse;
+		flex-wrap: nowrap;
+		width: 100%;
+		position: absolute;
+	}
+
+	.navigation:hover{
+		background-color: rgba(255, 255, 255, 0.0);
+	}
+
+	.navigation nav{
+		width: 100%;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.navigation a{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		border-top: 1px solid gray;
+		padding: 3% 0;
+	}
+
+	.navigation a:last-child{
+		border-bottom: 1px solid gray;
+	}
+	
+	.navigation img{
+		margin-bottom: 2%;
+	}
+
+	#header-img{
+		display: none;
+	}
+
+	.iod{
+		margin-top: 60%;
+		padding-top: 5%;
+	}
+
+	.section1{
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.section1 .left{
+		width: 100%;
+		padding: 3%;
+	}
+
+	.middle-img{
+		margin-bottom: 2%;
+	}
+
+	.section2{
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.section2 .left{
+		width: 100%;
+		padding: 3%;
+	}
 }
