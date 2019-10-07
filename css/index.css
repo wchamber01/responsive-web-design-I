@@ -23,6 +23,7 @@ time, mark, audio, video {
 	font: inherit;
 	vertical-align: baseline;
 }
+
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section {
@@ -65,12 +66,13 @@ h1, h2, h3, h4, h5 {
 
 /* Copy and paste your work from yesterday here and start to refactor into flexbox */
 body{
-	box-sizing: border-box;
+	
 	margin: 5%;
 }
 
+/********** BEGIN HOME PAGE CSS **********/
+
 .navigation{
-	box-sizing: border-box;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -253,19 +255,23 @@ footer{
 	padding: 20px;
 }
 
+/********** END HOME PAGE CSS **********/
+
+/********** BEGIN SERVICES PAGE CSS **********/
 .servicesNavigation{
-	box-sizing: border-box;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 	text-align: left;
-	/* position: fixed; */
 	margin-top: -4%;
-	z-index: 999;
 	background-color: rgba(144, 130, 130, 0.3);
 	border-radius: 10px;
 	padding: 20px;
 	box-shadow: 3px 3px 5px black;
+}
+
+.servicesNavigation nav{
+	width: 100%;
 }
 
 .servicesNavigation a{
@@ -274,6 +280,11 @@ footer{
 	color: black;
 	font-weight: bold;
 	text-shadow: 3px 3px 5px gray;
+	margin: 0 6%;
+}
+
+.servicesNavigation a:nth-child(1){
+	display: none;
 }
 
 .servicesNavigation a:hover{
@@ -356,7 +367,11 @@ footer{
 	margin-left: 20px;
 }
 
-/* MEDIA QUERIES - HOME PAGE */
+/********** END SERVICES PAGE CSS **********/
+
+/********** BEGIN MEDIA QUERIES - HOME PAGE **********/
+
+/***** BEGIN 800px *****/
 @media (max-width: 800px){
 	.navigation{
 		flex-direction: column-reverse;
@@ -391,7 +406,9 @@ footer{
 		margin-top: 10%;
 	}
 }
+/***** END 800px *****/
 
+/***** BEGIN 500px *****/
 @media (max-width: 500px){
 	.navigation{
 		flex-direction: column-reverse;
@@ -461,25 +478,65 @@ footer{
 		padding: 3%;
 	}
 }
+/***** END 500px *****/
 
-/* MEDIA QUERIES - SERVICES PAGE */
+/********** END MEDIA QUERIES - HOME PAGE **********/
+
+/********** BEGIN MEDIA QUERIES - SERVICES PAGE **********/
+
+/***** BEGIN 800px *****/
 @media (max-width: 800px){
 	.servicesNavigation{
-		flex-direction: column-reverse;
+		/* flex-direction: column-reverse; */
 		width: 100%;
 	}
 
-	.servicesNavigation
+	.servicesNavigation nav{
+		justify-content: center;
+		align-items: center;
+		width: 60%;
+		background-color: red;
+	}
+
+	.servicesNavigation a{
+	flex-direction: column-reverse;
+	}
+
+	.servicesNavigation img{
+		margin-bottom: 5%;
+	}
+}
+/***** END 800px *****/
+
+/***** BEGIN 500px *****/
+@media (max-width: 500px){
+	.servicesNavigation{
+		flex-direction: column-reverse;
+		flex-wrap: nowrap;
+		width: 100%;
+		position: absolute;
+	}
+
+	.servicesNavigation:hover{
+		background-color: rgba(255, 255, 255, 0.0);
+	}
 
 	.servicesNavigation nav{
-		display: flex;
 		width: 100%;
 		justify-content: center;
 		align-items: center;
 	}
 
 	.servicesNavigation a{
-		padding: 2% 3.4%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		border-top: 1px solid gray;
+		padding: 3% 0;
+	}
+
+	.servicesNavigation a:last-child{
+		border-bottom: 1px solid gray;
 	}
 	
 	.servicesNavigation img{
@@ -489,78 +546,7 @@ footer{
 	#header-img{
 		display: none;
 	}
-
-	.iod{
-		margin-top: 10%;
-	}
 }
+/***** END 500px *****/
 
-@media (max-width: 500px){
-	.navigation{
-		flex-direction: column-reverse;
-		flex-wrap: nowrap;
-		width: 100%;
-		position: absolute;
-	}
-
-	.navigation:hover{
-		background-color: rgba(255, 255, 255, 0.0);
-	}
-
-	.navigation nav{
-		width: 100%;
-		justify-content: center;
-		align-items: center;
-	}
-
-	.navigation a{
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		border-top: 1px solid gray;
-		padding: 3% 0;
-	}
-
-	.navigation a:last-child{
-		border-bottom: 1px solid gray;
-	}
-	
-	.navigation img{
-		margin-bottom: 2%;
-	}
-
-	#header-img{
-		display: none;
-	}
-
-	.iod{
-		margin-top: 60%;
-		padding-top: 5%;
-	}
-
-	.section1{
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-	}
-
-	.section1 .left{
-		width: 100%;
-		padding: 3%;
-	}
-
-	.middle-img{
-		margin-bottom: 2%;
-	}
-
-	.section2{
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-	}
-
-	.section2 .left{
-		width: 100%;
-		padding: 3%;
-	}
-}
+/********** END MEDIA QUERIES - SERVICES PAGE **********/
